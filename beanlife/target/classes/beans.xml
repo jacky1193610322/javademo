@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+  ~ Fabric4cloud.com Inc.
+  ~ Copyright (c) 2015-2018 All Rights Reserved.
+  -->
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:p="http://www.springframework.org/schema/p"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+            http://www.springframework.org/schema/beans/spring-beans-3.2.xsd http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd">
+
+    <bean id="beanPostProcessor" class="com.chen.lifecycle.MyBeanPostProcessor">
+    </bean>
+
+    <bean id="instantiationAwareBeanPostProcessor" class="com.chen.lifecycle.MyInstantiationAwareBeanPostProcessor">
+    </bean>
+
+    <bean id="beanFactoryPostProcessor" class="com.chen.lifecycle.MyBeanFactoryPostProcessor">
+    </bean>
+
+    <bean id="person" class="com.chen.lifecycle.Person" init-method="myInit"
+          destroy-method="myDestory" scope="singleton" p:name="张三" p:address="广州"
+          p:phone="159000000"/>
+
+    <!--<bean id="foo" class="com.chen.lifecycle.Foo"-->
+    <!--scope="singleton" p:name="keteng"/>-->
+
+    <!--<context:annotation-config></context:annotation-config>-->
+    <!--<context:component-scan base-package="com.chen.lifecycle"></context:component-scan>-->
+
+</beans>

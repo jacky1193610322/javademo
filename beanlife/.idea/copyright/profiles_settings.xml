@@ -1,0 +1,8 @@
+<component name="CopyrightManager">
+  <settings default="DAHO-copyright">
+    <LanguageOptions name="__TEMPLATE__">
+      <option name="addBlankAfter" value="false" />
+      <option name="lenBefore" value="1" />
+    </LanguageOptions>
+  </settings>
+</component>
