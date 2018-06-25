@@ -1,22 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<!--
-  ~ Fabric4cloud.com Inc.
-  ~ Copyright (c) 2015-2018 All Rights Reserved.
-  -->
 <beans xmlns="http://www.springframework.org/schema/beans"
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:p="http://www.springframework.org/schema/p"
        xsi:schemaLocation="http://www.springframework.org/schema/beans
             http://www.springframework.org/schema/beans/spring-beans-3.2.xsd">
 
-    <bean id="beanPostProcessor" class="com.chen.lifecycle.MyBeanPostProcessor">
+
+    <bean id="beanFactoryPostProcessor" class="com.chen.lifecycle.MyBeanFactoryPostProcessor">
     </bean>
 
     <bean id="instantiationAwareBeanPostProcessor" class="com.chen.lifecycle.MyInstantiationAwareBeanPostProcessor">
     </bean>
 
-    <bean id="beanFactoryPostProcessor" class="com.chen.lifecycle.MyBeanFactoryPostProcessor">
+    <bean id="beanPostProcessor" class="com.chen.lifecycle.MyBeanPostProcessor">
     </bean>
+
 
     <bean id="person" class="com.chen.lifecycle.Person" init-method="myInit"
           destroy-method="myDestory" scope="singleton" p:name="张三" p:address="广州"
@@ -24,6 +22,13 @@
 
     <!--<bean id="foo" class="com.chen.lifecycle.Foo"-->
     <!--scope="singleton" p:name="keteng"/>-->
+
+    <!--<bean id="messageSource"-->
+    <!--class="org.springframework.context.support.ResourceBundleMessageSource">-->
+    <!--<property name="basename">-->
+    <!--<value>locale/messages</value>-->
+    <!--</property>-->
+    <!--</bean>-->
 
     <!--<context:annotation-config></context:annotation-config>-->
     <!--<context:component-scan base-package="com.chen.lifecycle"></context:component-scan>-->
