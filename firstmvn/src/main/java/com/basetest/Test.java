@@ -2,7 +2,7 @@
  * Fabric4cloud.com Inc.
  * Copyright (c) 2015-2018 All Rights Reserved.
  */
-package com.chen;
+package com.basetest;
 
 /**
  * @author jacky
@@ -11,16 +11,6 @@ package com.chen;
 
 public class Test {
     private String msg;
-
-    private HelloWorldService helloWorldService;
-
-    public HelloWorldService getHelloWorldService() {
-        return helloWorldService;
-    }
-
-    public void setHelloWorldService(HelloWorldService helloWorldService) {
-        this.helloWorldService = helloWorldService;
-    }
 
     public String getMsg() {
         return msg;

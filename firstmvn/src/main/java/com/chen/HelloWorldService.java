@@ -4,6 +4,7 @@
  */
 package com.chen;
 
+import com.basetest.Test;
 import org.springframework.beans.BeansException;
 import org.springframework.beans.factory.FactoryBean;
 import org.springframework.beans.factory.config.BeanPostProcessor;
