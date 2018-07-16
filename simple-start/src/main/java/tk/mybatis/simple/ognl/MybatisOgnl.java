@@ -6,7 +6,6 @@ package tk.mybatis.simple.ognl;
 
 import org.apache.ibatis.ognl.Ognl;
 import org.apache.ibatis.ognl.OgnlException;
-import org.apache.ibatis.scripting.xmltags.OgnlCache;
 import org.apache.ibatis.scripting.xmltags.OgnlClassResolver;
 
 import java.util.Arrays;
@@ -26,13 +25,14 @@ public class MybatisOgnl {
         hashMapHashMap.put("_parameter", innerHashMap);
         hashMapHashMap.put("_databaseId", null);
 
-        System.out.println(OgnlCache.getValue("ids", hashMapHashMap));
+        //System.out.println(OgnlCache.getValue("ids", hashMapHashMap));
         Map<Object, OgnlClassResolver> context = Ognl.createDefaultContext(hashMapHashMap, new OgnlClassResolver());
 
-        Object chenobject = Ognl.parseExpression("ids");
+        Object chenobject = Ognl.parseExpression("_parameter.ids");
         Object cheno2 = Ognl.getValue(chenobject, context, hashMapHashMap);
 
         System.out.println(cheno2);
+        System.out.println(cheno2.getClass());
 
         System.out.println("**********************");
     }

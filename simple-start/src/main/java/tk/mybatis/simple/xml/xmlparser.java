@@ -5,7 +5,6 @@
 package tk.mybatis.simple.xml;
 
 import org.w3c.dom.Document;
-import org.w3c.dom.Element;
 import org.w3c.dom.Node;
 import org.w3c.dom.NodeList;
 
@@ -53,7 +52,7 @@ public class xmlparser {
             System.out.println("Node name: " + cNode.getNodeName());
             System.out.println("----------------------------");
             System.out.println(cNode.getNodeType());
-            Element element = (Element) cNode;
+            //Element element = (Element) cNode;
 
             if (cNode.getNodeType() == Node.ELEMENT_NODE) {
                 printNode(cNode);

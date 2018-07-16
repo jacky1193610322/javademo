@@ -18,6 +18,10 @@
         <plugin interceptor="tk.mybatis.simple.model.interceptor.PageInterceptor">
             <property name="dialect" value="tk.mybatis.simple.model.interceptor.MysqlDialect"/>
         </plugin>
+        <plugin interceptor="com.github.pagehelper.PageHelper">
+            <!-- config params as the following -->
+            <!--<property name="param1" value="value1"/>-->
+        </plugin>
     </plugins>
 
 
