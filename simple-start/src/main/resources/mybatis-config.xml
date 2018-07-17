@@ -42,6 +42,7 @@
 
     <mappers>
         <mapper resource="tk/mybatis/simple/mapper/CountryMapper.xml"/>
+        <mapper class="tk.mybatis.simple.model.CountryMapper"/>
         <!--<mapper resource="tk/mybatis/simple/mapper/fullTagMapper.xml"/>-->
     </mappers>
 </configuration>
