@@ -8,7 +8,7 @@
     <name>beanlife</name>
     <url>http://maven.apache.org</url>
     <properties>
-        <spring.version>4.3.13.RELEASE</spring.version>
+        <spring.version>4.3.18.RELEASE</spring.version>
     </properties>
     <dependencies>
         <dependency>
